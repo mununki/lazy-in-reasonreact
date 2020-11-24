@@ -1,0 +1,37 @@
+{
+  "name": "first-reason-react",
+  "version": "0.1.0",
+  "scripts": {
+    "re:build": "bsb -make-world",
+    "re:watch": "bsb -make-world -w -ws _ ",
+    "re:clean": "bsb -clean-world",
+    "dev": "NODE_ENV=development webpack serve --optimization-node-env=development --progress --host 0.0.0.0 --disable-host-check",
+    "build": "rm -rf dist && NODE_ENV=production webpack --optimization-node-env=production --progress",
+    "analyze:bundle": "NODE_ENV=production webpack --optimization-node-env=production --progress --profile --json > stats.json",
+    "server": "moduleserve ./dist --port 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "BuckleScript",
+    "ReasonReact",
+    "reason-react"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bs-css-emotion": "^2.1.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "reason-react": ">=0.7.1",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "devDependencies": {
+    "bs-platform": "^8.2.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "moduleserve": "^0.9.0",
+    "style-loader": "^2.0.0",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
