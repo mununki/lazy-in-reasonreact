@@ -4,9 +4,7 @@ let compute = t =>
     "";
   } else {
     let result =
-      Belt.Array.make(100000000, t)
-      ->Belt.Array.reduce("", (acc, item) => {
-          acc == item ? acc : item->Js.String2.toUpperCase
-        });
+      Belt.Array.make(100000000, 0)
+      ->Belt.Array.reduce("", (_, _) => {t->Js.String2.toUpperCase});
     result;
   };
